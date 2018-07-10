@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathJump", "Assembly-CSharp-firstpass.csproj", "{B8CE4C2A-48B2-B29C-A2CC-A734AC267CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathJump", "Assembly-CSharp.csproj", "{F8146D0F-2C1D-B4B5-83FC-FB214400976A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathJump", "Assembly-CSharp-Editor-firstpass.csproj", "{6546BE88-ED4D-AD48-BC7F-03979E41E7CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8CE4C2A-48B2-B29C-A2CC-A734AC267CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CE4C2A-48B2-B29C-A2CC-A734AC267CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CE4C2A-48B2-B29C-A2CC-A734AC267CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CE4C2A-48B2-B29C-A2CC-A734AC267CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8146D0F-2C1D-B4B5-83FC-FB214400976A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8146D0F-2C1D-B4B5-83FC-FB214400976A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8146D0F-2C1D-B4B5-83FC-FB214400976A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8146D0F-2C1D-B4B5-83FC-FB214400976A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6546BE88-ED4D-AD48-BC7F-03979E41E7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6546BE88-ED4D-AD48-BC7F-03979E41E7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6546BE88-ED4D-AD48-BC7F-03979E41E7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6546BE88-ED4D-AD48-BC7F-03979E41E7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
