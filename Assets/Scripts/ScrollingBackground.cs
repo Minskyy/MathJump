@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class ScrollingBackground : MonoBehaviour {
+public class ScrollingBackground : NetworkBehaviour {
 
 	public float backgroundSize;
 
-	private Transform cameraTransform;
+	public Transform cameraTransform;
 	private Transform[] layers;
 	private float viewZone = 10;
 	private int leftIndex;
 	private int rightIndex;
 	// Use this for initialization
 	private void Start () {
-		cameraTransform = Camera.main.transform;
+		//cameraTransform = Camera.main.transform;
 		layers = new Transform[transform.childCount];
 		for (int i = 0; i < transform.childCount; i++)
 			layers [i] = transform.GetChild (i);
@@ -43,6 +44,9 @@ public class ScrollingBackground : MonoBehaviour {
 	
 	// Update is called once per frame
 	private void Update () {
+
+		Debug.Log ("wtf");
+		
 		if (cameraTransform.position.x < (layers [leftIndex].transform.position.x + viewZone))
 			ScrollLeft ();
 		if (cameraTransform.position.x > (layers [rightIndex].transform.position.x - viewZone))

@@ -1,9 +1,8 @@
 using System;
 using UnityEngine;
-
 namespace UnityStandardAssets._2D
 {
-    public class Camera2DFollow : MonoBehaviour
+	public class Camera2DFollow : MonoBehaviour
     {
         public Transform target;
         public float damping = 1;
@@ -28,6 +27,7 @@ namespace UnityStandardAssets._2D
         // Update is called once per frame
         private void Update()
         {
+			
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - m_LastTargetPosition).x;
 

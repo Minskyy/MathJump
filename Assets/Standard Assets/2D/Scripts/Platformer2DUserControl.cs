@@ -40,9 +40,12 @@ namespace UnityStandardAssets._2D
             }
         }
 
-		public void impulse(){
-			h += 0.3f;
-			Debug.Log ("IMPULSE");
+		[Command]
+		public void CmdImpulse(){
+			if(isLocalPlayer){
+				h += 0.3f;
+				Debug.Log ("IMPULSE");
+			}
 		}
 
 		public void stop(){

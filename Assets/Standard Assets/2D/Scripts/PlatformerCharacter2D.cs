@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.Networking;
 namespace UnityStandardAssets._2D
 {
-    public class PlatformerCharacter2D : MonoBehaviour
+	public class PlatformerCharacter2D : NetworkBehaviour
     {
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
@@ -18,7 +18,7 @@ namespace UnityStandardAssets._2D
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
-        private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        //private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
         private void Awake()
         {
@@ -32,6 +32,7 @@ namespace UnityStandardAssets._2D
 
         private void FixedUpdate()
         {
+
             m_Grounded = false;
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
@@ -51,6 +52,11 @@ namespace UnityStandardAssets._2D
 
         public void Move(float move, bool crouch, bool jump)
         {
+
+
+		
+
+
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
             {
@@ -75,7 +81,7 @@ namespace UnityStandardAssets._2D
 
                 // Move the character
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
-
+				/*
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
                 {
@@ -87,7 +93,7 @@ namespace UnityStandardAssets._2D
                 {
                     // ... flip the player.
                     Flip();
-                }
+                }*/
             }
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))
@@ -99,7 +105,7 @@ namespace UnityStandardAssets._2D
             }
         }
 
-
+		/*
         private void Flip()
         {
             // Switch the way the player is labelled as facing.
@@ -109,6 +115,6 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
-        }
+        }*/
     }
 }
